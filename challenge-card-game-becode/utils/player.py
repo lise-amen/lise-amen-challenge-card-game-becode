@@ -28,14 +28,17 @@ class Player():
         self.turn_count = 0
         self.card_number = 0
         self.history = list()
+        self.play_card = list()
 
     def play(self):
-        play_card = random.choice(self.cards)  # pick a card randomly in cards
-        self.cards.remove(play_card) # remove the pick card
-        self.history.append(play_card) # add the card played in the history
-        print(self.name,"turn number" ,self.turn_count,"played:", play_card)
-        #return the Card
-
+        self.play_card = random.choice(self.cards)  # pick a card randomly in cards
+        self.cards.remove(self.play_card) # remove the pick card
+        self.history.append(self.play_card) # add the card played in the history
+        self.turn_count+=1
+        print(self.name,"turn number" ,self.turn_count,"played:", self.play_card)
+       
+    def battle(self):
+        print('test')
 
 class Deck():
 

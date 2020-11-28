@@ -24,5 +24,11 @@ if __name__ == "__main__":
 
     create_deck.distribute(create_board.players)
 
-    for i in range(len(name_players)) : 
-        create_board.players[i].play() #call the method play for the player number
+    for i in range(26) :
+        for i in range(len(name_players)) : 
+            create_board.players[i].play() #call the method play for the player number
+            
+    
+     
+
+print("my card", create_board.players[0].play_card)
