@@ -1,7 +1,7 @@
 # game.py
-from player import Player
+from utils.player import Player
 
-from player import Deck
+from utils.player import Deck
 
 class Board():
 

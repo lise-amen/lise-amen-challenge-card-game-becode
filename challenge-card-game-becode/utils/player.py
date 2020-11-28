@@ -1,7 +1,7 @@
 # player.py
-from card import Card
+from utils.card import Card
 
-from card import Symbol
+from utils.card import Symbol
 
 import random
 
@@ -13,6 +13,15 @@ class Player():
         - a number of cards
         - a history """
 
+    dictionnary_card = {'A ♥' : 14, '2 ♥' : 2, '3 ♥' : 3, '4 ♥' : 4, '5 ♥' : 5, '6 ♥' : 6, '7 ♥' : 7, '8 ♥' : 8, '9 ♥' : 9, '10 ♥' : 10,
+     'J ♥' : 11, 'Q ♥' : 12, 'K ♥' : 13, 'A ♦' : 14, '2 ♦' : 2, '3 ♦' : 3, '4 ♦' : 4, '5 ♦' : 5, '6 ♦' : 6, '7 ♦' : 7, '8 ♦' : 8, '9 ♦' : 9,
+     '10 ♦' : 10, 'J ♦' : 11, 'Q ♦' : 12, 'K ♦' : 13, 'A ♣' : 15, '2 ♣' : 2, '3 ♣' : 3, '4 ♣' : 4, '5 ♣' : 5, '6 ♣' : 6, '7 ♣' : 7, '8 ♣' : 8, 
+     '9 ♣' : 9, '10 ♣' : 10, 'J ♣' : 11, 'Q ♣' : 12, 'K ♣' : 13, 'A ♠' : 14, '2 ♠' : 2, '3 ♠' : 3, '4 ♠' : 4, '5 ♠' : 5, '6 ♠' : 6, '7 ♠' : 7, 
+     '8 ♠' : 8, '9 ♠' : 9, '10 ♠' : 10, 'J ♠' : 11, 'Q ♠' : 12, 'K ♠' : 13}
+
+    print(dictionnary_card['7 ♥']) #test dictionnary 
+
+
     def __init__(self, name : str) :
         self.name = name
         self.cards = list()
@@ -22,11 +31,9 @@ class Player():
 
     def play(self):
         play_card = random.choice(self.cards)  # pick a card randomly in cards
-        print(play_card)
         self.cards.remove(play_card) # remove the pick card
-        print(self.cards)
         self.history.append(play_card) # add the card played in the history
-        print(self.name[0],"turn number" ,self.turn_count,"played:", play_card)
+        print(self.name,"turn number" ,self.turn_count,"played:", play_card)
         #return the Card
 
 
@@ -40,6 +47,7 @@ class Deck():
         for i in Symbol.icon_card :
             for j in Card.value_card :
                 self.cards.append(j+ ' ' + i)
+        print(self.cards)
 
     #shuffle all the Card instances of cards
     def shuffle_deck(self) :

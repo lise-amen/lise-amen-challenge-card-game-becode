@@ -1,16 +1,15 @@
 
 # game.py
-from player import Player
+from utils.player import Player
 
-from player import Deck
+from utils.player import Deck
 
-from game import Board
+from utils.game import Board
 
 
 if __name__ == "__main__":
 
     name_players = ['J1','J2']
-
 
     create_board = Board(name_players) #création de l'objet create_board dans la classe board
 
@@ -18,10 +17,10 @@ if __name__ == "__main__":
     create_deck.fill_deck() #call method fill_deck to generate the card game
     create_deck.shuffle_deck() #call the method shuffle_deck to shuffle the card game
 
-    print(create_deck.cards)
+    #print(create_deck.cards)
 
-    print(create_board.players[0].name)
-    print(create_board.players[1].name)
+    #print(create_board.players[0].name)
+    #print(create_board.players[1].name)
 
     create_deck.distribute(create_board.players)
 
