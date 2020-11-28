@@ -5,6 +5,7 @@ from utils.card import Symbol
 
 import random
 
+
 class Player():
     """ Player defining the game intructions characterized by :
         - a player name
@@ -12,15 +13,6 @@ class Player():
         - a count
         - a number of cards
         - a history """
-
-    dictionnary_card = {'A ♥' : 14, '2 ♥' : 2, '3 ♥' : 3, '4 ♥' : 4, '5 ♥' : 5, '6 ♥' : 6, '7 ♥' : 7, '8 ♥' : 8, '9 ♥' : 9, '10 ♥' : 10,
-     'J ♥' : 11, 'Q ♥' : 12, 'K ♥' : 13, 'A ♦' : 14, '2 ♦' : 2, '3 ♦' : 3, '4 ♦' : 4, '5 ♦' : 5, '6 ♦' : 6, '7 ♦' : 7, '8 ♦' : 8, '9 ♦' : 9,
-     '10 ♦' : 10, 'J ♦' : 11, 'Q ♦' : 12, 'K ♦' : 13, 'A ♣' : 15, '2 ♣' : 2, '3 ♣' : 3, '4 ♣' : 4, '5 ♣' : 5, '6 ♣' : 6, '7 ♣' : 7, '8 ♣' : 8, 
-     '9 ♣' : 9, '10 ♣' : 10, 'J ♣' : 11, 'Q ♣' : 12, 'K ♣' : 13, 'A ♠' : 14, '2 ♠' : 2, '3 ♠' : 3, '4 ♠' : 4, '5 ♠' : 5, '6 ♠' : 6, '7 ♠' : 7, 
-     '8 ♠' : 8, '9 ♠' : 9, '10 ♠' : 10, 'J ♠' : 11, 'Q ♠' : 12, 'K ♠' : 13}
-
-    print(dictionnary_card['7 ♥']) #test dictionnary 
-
 
     def __init__(self, name : str) :
         self.name = name
@@ -36,9 +28,6 @@ class Player():
         self.history.append(self.play_card) # add the card played in the history
         self.turn_count+=1
         print(self.name,"turn number" ,self.turn_count,"played:", self.play_card)
-       
-    def battle(self):
-        print('test')
 
 class Deck():
 

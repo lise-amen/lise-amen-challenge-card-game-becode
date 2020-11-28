@@ -14,6 +14,7 @@ class Board():
         self.history_cards  = list()
 
     def start_game(self) :
+        print("! The game start !")
         create_deck = Deck() #create a deck in the deck class
         create_deck.fill_deck() #create cards in the deck
         create_deck.shuffle_deck() #shuffle cards in the deck
