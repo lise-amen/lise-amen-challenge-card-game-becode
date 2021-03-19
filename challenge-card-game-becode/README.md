@@ -11,8 +11,6 @@ Create gameover conditions and add the possibiliy in the game to end because of 
 Add points for each player if the card is the most powerful card played that turn.
 Select a winner out of the players at the end of the game.
 
-"""
-Unfortunataly, the game is not finish, it's my first project in OOP python. 
 
 The game : 
 - The game generates all the cards.
